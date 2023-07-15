@@ -20,10 +20,10 @@ export default function SignUpForm() {
         `${API_BASE_URL}users/register`,
         formData
       );
-      console.log("Signup successful", response);
+      // Signup successful
       router.push("/");
     } catch (error) {
-      console.log("Signup error", error);
+      // Handle signup error
       setLoading("failed");
     }
   };
@@ -64,7 +64,7 @@ export default function SignUpForm() {
       ...prev,
       [field]: !prev[field],
     }));
-    console.log("Clicked");
+    // Toggle password visibility
   };
 
   return (
